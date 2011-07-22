@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<!-- /ht Paul Irish - http://front.ie/j5OMXi -->
+<!--[if lt IE 7 ]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title></title>
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- /ht Andy Clarke - http://front.ie/lkCwyf -->
+<meta http-equiv="cleartype" content="on">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+<link rel="shortcut icon" href="/link/to/favicon.ico">
+<link rel="apple-touch-icon" href="/link/to/apple-touch-icon.png">
+
+<!-- /ht Jeremy Keith - http://front.ie/mLXiaS -->
+<link rel="stylesheet" href="css/example/global.css" media="all">
+<link rel="stylesheet" href="css/example/layout.css" media="all and (min-width: 33.236em)">
+<!-- 30em + (1.618em * 2) = 33.236em / Eliminates potential of horizontal scrolling in most cases -->
+
+<!--[if (lt IE 9) & (!IEMobile)]>
+<link rel="stylesheet" href="css/example/layout.css" media="all">
+<![endif]-->
+
+<script src="js/libs/modernizr-1.7.min.js"></script>
+  
+</head>
+
+<body>
+  
+  <div id="container" class="cf">
+    
+    <article>
+      <header>
+        <h2>
+          <img src="images/example/header-logo.png" alt="Front" id="header-logo">
+        </h2> 
+        <h1>The Goldilocks Approach <span>to Responsive Web Design</span></h1>
+      </header>
+      
+      <div id="main" role="main" class="cf">
+        <p class="intro">With over 4 billion mobile devices in use around the world, mobile browsing&#160;is <a href="http://www.quirksmode.org/blog/archives/2011/01/2010_mobile_bro.html" title="2010 mobile browser stats">rising fast</a>. We can no longer assume that our sites will be viewed on a desktop monitor with an average resolution. Perhaps we never could.</p> 
+ 
+        <aside> 
+          <img src="http://placekitten.com/g/500/500" alt="" /> 
+        </aside>
+        
+        <p>The answer, proposed by Ethan Marcotte, is <a href="http://www.alistapart.com/articles/responsive-web-design/" title="Ethan Marcottes article on Responsive Web Design">Responsive Web Design</a>. Instead of building separate sites for each device, we build one site that adapts to each device. However, the current approach to responsive design is still based on a few popular devices and, as a result, is likely to become obsolete as fast as they do.</p>        
+        <p>What if we could create a truly universal design that was <strong>device independent</strong> &#8211; one that, no matter what device you viewed it on, looked like it was designed just for that device? At <a href="http://newadventuresconf.com/" title="New Adventures Conference">New Adventures</a>, Mark Boulton talked about <a href="http://www.markboulton.co.uk/journal/comments/a-richer-canvas" title="Mark Boulton: A Richer Canvas">designing from the content out, rather than the canvas in</a>, and we think this makes good sense. Perhaps the only way to create a design that will work on any device is to forget about the device altogether.</p>
+        
+        <h3>Current Practice</h3>        
+        <p><a href="http://stuffandnonsense.co.uk/projects/320andup/" title="320 and Up: A tiny screen first boilerplate extension">The current approach</a> to responsive design binds the design to the device. It uses pixel widths based on the dimensions of the most common devices, but we don&#8217;t think this approach is good enough. It results in designs that are based on two big inconstants:</p>
+        
+        <ul>
+          <li>device resolution; and,</li>
+          <li>pixels.</li>
+        </ul> 
+ 
+        <h4>Device resolution</h4> 
+        <p>There are thousands of different devices out there, with millions of potential contexts. We can&#8217;t support them all, so we end up choosing a few popular devices, basing our designs on their resolutions, and ignoring the rest of the products on the market. When technology moves on and resolutions increase, our sites will look as outdated as a 600&times;400 site does now.</p> 
+ 
+        <h4>Pixels</h4> 
+        <p>Pixels sizes aren&#8217;t constant &#8211; or at least the display of them isn&#8217;t. 16px text on an iPhone can be ~60% the size of 16px text on a Macbook. Basing designs on pixel measurements creates inconsistency in viewing size across devices and can negatively affect readability and usability.</p> 
+ 
+        <h3>The Device Doesn&#8217;t Matter</h3>
+        <p>So how do we do as Mark Boulton suggests and go about designing from the content out? In practice, it means starting with the most common form of content, the paragraph element, and building up to a full layout.</p>
+        <p>It&#8217;s tempting to first set the body font size. But the manufacturer or the user has already set the browser&#8217;s default size for readability, and we don&#8217;t think you should mess with it without good reason.</p>
+        <p>However, if you base your entire design on this base font size (using ems), then as it increases or decreases, so will your design. <strong>Using ems allows your designs to be&#160;resolution independent.</strong></p>
+        <p><img src="images/example/responsive.jpg" alt="" /></p>
+        <p>Next, use max-width to set the line length of the paragraph to be as readable as possible (~66 characters per line). This will vary from font to font, but something around 30em usually does the trick. This sets the width of your single column layout, making it &#8216;just right&#8217; for readability.</p> 
+         
+        <h3>The Goldilocks Approach</h3> 
+        <p>Now, no matter which device your design is viewed in, the space available will be bigger, smaller, or just right, and you can use media queries to make the most of it.</p>
+        
+        <p><img src="images/example/responsive2.jpg" alt="" /></p> 
+ 
+        <h4>Too big</h4> 
+        <p>If there is substantially more space than the single column width, then you can consider moving to a multi-column layout. For example, if the single column width is 28em (plus 1em margin on either side), and the screen width is more than 45em, then you have enough room to move to a three-column layout with 13.5em columns and 1em gutters, with the main content spanning two columns (so remaining the optimum width for readability).</p> 
+        <p><img src="images/example/responsive3.jpg" alt="" /></p> 
+ 
+        <h4>Too small</h4> 
+        <p>If there&#8217;s less space than what&#8217;s required for optimum readability, then you need to make the most of the space you have. For example:</p>
+        
+        <ul> 
+          <li>halving the outer margin (but not removing it); and/or</li> 
+          <li>bringing any hanging punctuation inline (so it isn&#8217;t cut off).</li> 
+        </ul>
+        
+        <p><img src="images/example/responsive4.jpg" alt="" /></p> 
+ 
+        <h4>Just right</h4> 
+        <p>If the space available is just right for your single column, then you&#8217;ve nothing to worry about. Your work here is done. Go make a cup of tea.</p>
+        <p>We&#8217;re not saying that a single column layout is the best layout for every site. We don&#8217;t know which layout a user will be viewing, so our sites need to work just as well in a single column state as they do with multiple columns. However, in practice, we&#8217;ve found that it helps to get the single column state right and then work up or down.</p> 
+ 
+        <h3>The Perks</h3> 
+        <p>We think this approach has a quite a few benefits.</p> 
+        <p>With the current approach, even if you only designed for Apple devices (lucky!), you would require up to five different states:</p>
+        
+        <ol> 
+          <li>iMac (large display)</li> 
+          <li>Macbook (smaller display)</li> 
+          <li>iPad (tablet &#8211; could be portrait or landscape)</li> 
+          <li>iPhone 4 (Retina)</li> 
+          <li>iPhone (non-retina).</li> 
+        </ol> 
+ 
+        <p>The&#160;<a href="http://edenspiekermann.com/" title="Edenspiekermann Website">Edenspiekermann</a>&#160;site seems to take this approach and does it very well, but it&#8217;s just not a scalable solution. <strong>With the Goldilocks approach, you only have to consider three states</strong>:</p>
+        
+        <ol> 
+          <li>multi column (too big)</li> 
+          <li>narrow column (too small)</li> 
+          <li>single column (just right).</li> 
+        </ol>
+        
+        <p>By taking the device resolution out of the equation, you get layouts that should work across all devices and contexts, even ones that haven&#8217;t been invented yet. If, for whatever reason, a user has their base font size set to 80px, then this approach should still produce an appropriate layout for the space available. Talk about <strong>device independence</strong>.</p> 
+        <p>And finally, technology changes, but the human body has stayed pretty constant for the past few thousand years. By designing for human constraints (readability) rather than technological constraints (device size and resolution), <strong>your layouts won&#8217;t date any time soon.</strong></p> 
+        <p>And so the designers lived happily ever after&#8230;</p>         
+        <p><em>Responsive design requires a new way of thinking, and there&#8217;s still plenty of discussion and exploration to be had before we can settle on what is &#8216;best practice&#8217;. We&#8217;ve found this approach to work well for us, but how do you think it would work for you?</em></p> 
+         
+        <h3><a href="http://www.designbyfront.com/workinprogress/article/the-goldilocks-approach-to-responsive-design" title="Leave a comment on the original article">&laquo; Read the original article</a></h3> 
+      
+    <footer class="cf"> 
+      <p><a href='http://www.designbyfront.com'><img src="images/example/footer-logo.png" alt="Front" id="footer-logo" /></a></p> 
+      <p>Front is an award-winning web strategy and design studio committed to making the web a better place.</p> 
+    </footer>
+    
+      </div><!-- /main -->
+    
+    </article>
+    
+  </div><!-- /container -->      
+  
+</body>
+
+</html>
