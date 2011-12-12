@@ -96,8 +96,8 @@ small { font-size: 80%; }
 
 /* 4. LINKS
 ----------------------------------------------------------------------------------------*/
-a, a:visited { outline: none; color: #439BBD; text-decoration: underline; }  
-a:hover { outline: none; text-decoration:none; }  
+a { outline: none; color: #439BBD; text-decoration: underline; }  
+a:hover, a:focus { outline: none; text-decoration:none; }  
 a:active, a:focus { outline: none; }
 
 
