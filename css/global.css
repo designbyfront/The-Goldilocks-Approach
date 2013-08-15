@@ -35,8 +35,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
   margin: 0;
@@ -50,11 +50,11 @@ time, mark, audio, video {
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
   display: block;
   }
-  
-  
+
+
 /* 2. ROOT
 ----------------------------------------------------------------------------------------*/
-html { 
+html {
   overflow-y: scroll;
   background: #FFF;
   }
@@ -79,12 +79,12 @@ h1, h2, h3, h4, h5, h6 {
   }
 
 p, ul, ol, dl, blockquote {
-    font-size: 1em;
-    line-height: 1.618em;
-    margin-bottom: 1.618em; 
-    max-width: 30em; /* Optimal width for long-form text */
+  font-size: 1em;
+  line-height: 1.618em;
+  margin-bottom: 1.618em;
+  max-width: 30em; /* Optimal width for long-form text */
   }
-    
+
 ul { list-style-type: disc; margin-left: 1.618em; }
 ol { list-style-type: decimal; margin-left: 1.618em; }
 nav ul, nav ol { list-style: none; margin: 0; padding: 0;}
@@ -96,8 +96,8 @@ small { font-size: 80%; }
 
 /* 4. LINKS
 ----------------------------------------------------------------------------------------*/
-a, a:visited { outline: none; color: #439BBD; text-decoration: underline; }  
-a:hover { outline: none; text-decoration:none; }  
+a, a:visited { outline: none; color: #439BBD; text-decoration: underline; }
+a:hover { outline: none; text-decoration:none; }
 a:active, a:focus { outline: none; }
 
 
@@ -109,9 +109,9 @@ a:active, a:focus { outline: none; }
 /* 6. CUSTOM LAYOUT & TYPOGRAPHY (Baby bear)
 ----------------------------------------------------------------------------------------*/
 #container {
-    padding: 0.809em;
-    max-width: 30em;
-    margin: auto;
+  padding: 0.809em;
+  max-width: 30em;
+  margin: auto;
   }
 
 aside { width: 100%; }
