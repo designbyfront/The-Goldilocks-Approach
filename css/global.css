@@ -45,19 +45,19 @@ time, mark, audio, video {
   font-size:100%;
   font: inherit;
   vertical-align: baseline;
-  }
+}
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
   display: block;
-  }
-  
-  
+}
+
+
 /* 2. ROOT
 ----------------------------------------------------------------------------------------*/
 html { 
   overflow-y: scroll;
   background: #FFF;
-  }
+}
 
 /* /ht Ethan Marcotte - http://front.ie/l8rJaA */
 img, embed, object, video { max-width: 100%; }
@@ -71,34 +71,35 @@ body {
   font-size: 1em;
   line-height: 1.618em;
   color: #333;
-  }
+}
 
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0.809em;
   line-height: 1em;
-  }
+}
 
 p, ul, ol, dl, blockquote {
-    font-size: 1em;
-    line-height: 1.618em;
-    margin-bottom: 1.618em; 
-    max-width: 30em; /* Optimal width for long-form text */
-  }
-    
-ul { list-style-type: disc; margin-left: 1.618em; }
-ol { list-style-type: decimal; margin-left: 1.618em; }
-nav ul, nav ol { list-style: none; margin: 0; padding: 0;}
+  font-size: 1em;
+  line-height: 1.618em;
+  margin-bottom: 1.618em;
+  max-width: 30em; /* Optimal width for long-form text */
+}
+
+ul        { list-style-type: disc; margin-left: 1.618em; }
+ol        { list-style-type: decimal; margin-left: 1.618em; }
+nav ul,
+nav ol    { list-style: none; margin: 0; padding: 0; }
 
 b, strong { font-weight: bold; }
-i, em { font-style: italic; }
-small { font-size: 80%; }
+i, em     { font-style: italic; }
+small     { font-size: 80%; }
 
 
 /* 4. LINKS
 ----------------------------------------------------------------------------------------*/
-a, a:visited { outline: none; color: #439BBD; text-decoration: underline; }  
-a:hover { outline: none; text-decoration:none; }  
-a:active, a:focus { outline: none; }
+a { outline: none; color: #439BBD; text-decoration: underline; }
+a:hover, a:focus { outline: none; text-decoration: none; }
+a:active { outline: none; }
 
 
 /* 5. GLOBAL LAYOUT & GLOBAL CUSTOM TYPOGRAPHY
@@ -109,10 +110,10 @@ a:active, a:focus { outline: none; }
 /* 6. CUSTOM LAYOUT & TYPOGRAPHY (Baby bear)
 ----------------------------------------------------------------------------------------*/
 #container {
-    padding: 0.809em;
-    max-width: 30em;
-    margin: auto;
-  }
+  padding: 0.809em;
+  max-width: 30em;
+  margin: auto;
+}
 
 aside { width: 100%; }
 
@@ -121,4 +122,4 @@ aside { width: 100%; }
 ----------------------------------------------------------------------------------------*/
 .cf:before, .cf:after { content: ""; display: block; }
 .cf:after { clear: both; }
-.ie6 .cf { zoom: 1 }
+.ie6 .cf { zoom: 1; }
